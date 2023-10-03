@@ -1,0 +1,6 @@
+Components connected and checked:
+
+Stepper,Stepperdriver(Nema 23 18.9Kg and tb6600) - 12V  5A 
+Raspberry Pi and Camera                          - 5.1V 3A
+Ultrasonic Sensor (HC-SR04)                      - 
+IR Sensor
