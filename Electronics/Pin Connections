@@ -1,0 +1,11 @@
+#ALL ARE BOARD NUMBERS
+
+Stepper-
+    Dir-10
+    Step-8
+IR-
+    IR1-16
+    IR2-18
+Ultrasonic-
+    Trig-26
+    Echo-28
