@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
-each_bin_steps =67
+each_bin_steps =200
 		
 # Direction pin from controller
 DIR = 10
