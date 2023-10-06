@@ -1,12 +1,13 @@
-from cvzone.ClassificationModule import Classifier
-import cv2
-import time
+
 
 def most_freq(List):
 	return max(set(List),key = List.count)
 	
 
 def detection():
+	from cvzone.ClassificationModule import Classifier
+	import cv2
+	import time
 	cap = cv2.VideoCapture(0)
 	maskClassifier = Classifier("/home/user/Desktop/keras_model.h5","/home/user/Desktop/labels.txt")    
 	prediction_list = [];

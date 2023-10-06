@@ -1,7 +1,8 @@
-import RPi.GPIO as GPIO
-from time import sleep
+
 
 def stepper_movement(new_bin_no , current_bin_no):
+	import RPi.GPIO as GPIO
+	from time import sleep
 	each_bin_steps =67
 	if(new_bin_no == current_bin_no):
 		return current_bin_no
@@ -30,7 +31,7 @@ def stepper_movement(new_bin_no , current_bin_no):
 			sleep(1.0)
 			#Make it go anti_clockwise
 			GPIO.output(DIR, CCW)
-	else if(current_bin_no == 1):
+	elif(current_bin_no == 1):
 		if(new_bin_no == 0):
 			sleep(1.0)
 			#Make it go anti_clockwise

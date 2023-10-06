@@ -1,9 +1,10 @@
-import RPi.GPIO as GPIO
-import time
+
 
 
 def irdetection():
-	sensor1 = 69 #has to be changed
+	import RPi.GPIO as GPIO
+	import time
+	sensor1 =  12 #has to be changed
 
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(sensor1,GPIO.IN)

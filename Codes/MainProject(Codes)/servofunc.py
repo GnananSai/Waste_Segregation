@@ -1,13 +1,13 @@
-import RPi.GPIO as GPIO
-import time
 
-def servo_rot:
-	 
+
+def servo_rot():
+	import RPi.GPIO as GPIO
+	import time
 	GPIO.setmode(GPIO.BCM)
 	GPIO.setup(40, GPIO.OUT)
 	GPIO.setup(38, GPIO.OUT)
 	chanlist =(40,38)
-	p = GPIO.PWM(chanlist, 100)
+	p = GPIO.PWM(40, 100)
 	x=1 #has to change
 	p.start(x)
 

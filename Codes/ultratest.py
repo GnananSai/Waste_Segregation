@@ -8,7 +8,8 @@ echoPin=1		#Receiving pin
 GPIO.setup(trigPin, GPIO.OUT)	
 GPIO.setup(echoPin, GPIO.IN)
 empty = 900		#Have to change its some random value for now.(Value when the bin is empty)
-end_time = time.time()+5;
+starttime = time.time()
+end_time = starttime+5;
 n=0
 avg=0
 try: 

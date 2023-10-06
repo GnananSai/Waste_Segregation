@@ -9,7 +9,7 @@ GPIO.setup(sensor,GPIO.IN)
 
 
 
-try: 
+try:
    while True:
       if GPIO.input(sensor):
           print("Object Detected")
