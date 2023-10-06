@@ -5,6 +5,7 @@ from irdetection import irdetection
 from servofunc import servo_rot
 
 current_bin = 0
+percentages= [0, 0, 0]
 try:
 	while True:
 		if(irdetection()):
@@ -12,4 +13,5 @@ try:
 			if(new_bin ==3):
 				continue
 			current_bin = stepper_movement(current_bin, new_bin)
-			servo_rot()
+			servo_rot() #Once forwad and Once backward (Have to change yet)
+			perccentages[current_bin] = ultrasonic()

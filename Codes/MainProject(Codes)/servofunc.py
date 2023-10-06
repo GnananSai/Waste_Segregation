@@ -1,21 +1,22 @@
 import RPi.GPIO as GPIO
-from time import sleep
+import time
 
-def get_pwm(angle):
-    return (angle/18.0) + 2.5
-
-
-def servo_rot():
+def servo_rot:
+	 
 	GPIO.setmode(GPIO.BCM)
-	pwmPin = 18
-	GPIO.setup(pwmPin, GPIO.OUT)
-	pwm = GPIO.PWM(pwmPin, 50)
-	pwm.start(0)
-	i=0
-	try:
-		#angle = float(input('angle: '))
-		pwmPercent = get_pwm(360)
-		pwm.ChangeDutyCycle(pwmPercent)
-		sleep(.1)
-		GPIO.cleanup()
-		return
+	GPIO.setup(40, GPIO.OUT)
+	GPIO.setup(38, GPIO.OUT)
+	chanlist =(40,38)
+	p = GPIO.PWM(chanlist, 100)
+	x=1 #has to change
+	p.start(x)
+
+	p.ChangeDutyCycle(2.5)   #fast clockwise
+	time.sleep(x)
+	p.ChangeDutyCycle(11.5) # may need to be adjusted # slow clockwise
+	time.sleep(x)
+	p.ChangeDutyCycle(20.5) #fast anticlockwise
+	time.sleep(x)
+	p.ChangeDutyCycle(11.5) # may need to be adjusted #slow anticlockwise
+
+	GPIO.cleanup()

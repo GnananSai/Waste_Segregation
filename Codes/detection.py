@@ -5,7 +5,7 @@ import cv2
 
     
 cap = cv2.VideoCapture(0)
-    maskClassifier = Classifier("/home/user/Desktop/keras_model.h5","/home/user/Desktop/labels.txt")    #path of model, labels respectively
+maskClassifier = Classifier("/home/user/Desktop/keras_model.h5","/home/user/Desktop/labels.txt")    #path of model, labels respectively
 
 classDic = {0: 0,           #0 Organic
             1: 2,           #1 Recyclable

@@ -3,21 +3,18 @@ import time
 
 
 def irdetection():
-	sensor1 = 23
-	sensor2 = 24
+	sensor1 = 69 #has to be changed
 
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(sensor1,GPIO.IN)
-	GPIO.setup(sensor2,GPIO.IN)
 
 	try: 
-		if GPIO.input(sensor1) or GPIO.input(sensor2):
+		if GPIO.input(sensor1):
 			counter =True
-			#print "Object Detected"
-			while GPIO.input(sensor1) or GPIO.input(sensor2):
-				time.sleep(0.2)
 		else:
 			counter =False
 		GPIO.cleanup()
 		return counter
+	except:
+		GPIO.cleanup()
 		

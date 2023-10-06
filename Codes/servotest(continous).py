@@ -1,8 +1,10 @@
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.OUT)
-p = GPIO.PWM(21, 100)
+GPIO.setup(40, GPIO.OUT)
+GPIO.setup(38, GPIO.OUT)
+chanlist =(40,38)
+p = GPIO.PWM(chanlist, 100)
 x=1 #has to change
 p.start(x)
 

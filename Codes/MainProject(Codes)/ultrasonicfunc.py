@@ -3,8 +3,8 @@ import time
 
 def ultrasonic():
 	GPIO.setmode(GPIO.BCM)
-	trigPin=23		#Trigger oin
-	echoPin=24		#Receiving pin
+	trigPin= 7	#Trigger oin
+	echoPin= 1		#Receiving pin
 	GPIO.setup(trigPin, GPIO.OUT)	
 	GPIO.setup(echoPin, GPIO.IN)
 	empty = 900		#Have to change its some random value for now.(Value when the bin is empty)
